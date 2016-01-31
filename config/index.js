@@ -81,7 +81,7 @@ const config_production = {
 			// the delay in second to put the job
 			delay: 0,
 			// time to run in second
-			ttr: 10,
+			ttr: 20,
 			// the payload
 			payload: {
 				from: 'HKD',
@@ -90,9 +90,9 @@ const config_production = {
 		},
 		consumer: {
 			// after success, the delay in second to release the job (retry)
-			success_delay: 5,
+			success_delay: 60,
 			// after fail, the delay in second to release the job (retry)
-			failure_delay: 0,
+			failure_delay: 3,
 			// total trials
 			success_trials: 10,
 			// the minimum number of failure. If exceeds, the job buried.
