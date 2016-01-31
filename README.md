@@ -57,6 +57,6 @@ Please take a look to the comments inside <b> config/index.js </b>
 
 ## Enhancement and Alternative
 ##### 1. If job histroy is important, we could use <b>release</b>, we could use <b>mongodb</b> or <b>redis</b> to store the either success_count or failure_count (or both) so that we could keep the same jobId as well as the beanstalkd job histroy.  
-### 2. Use <b>winston</b> logger to replace console.log, we could make use of <b>winston</b> to log on file, and also skip log during <b>npm test</b>.  
+##### 2. Use <b>winston</b> logger to replace console.log, we could make use of <b>winston</b> to log on file, and also skip log during <b>npm test</b>.  
 ##### 3. Make use of latest ES6 and ES7 syntax with <b>babel-core/register</b> (Babel 6) hook.
 ##### 4. Support passing argument from console in <b>npm produce</b> and <b>npm consume</b> to reduce necessarily to change the config.
