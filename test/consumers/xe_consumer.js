@@ -137,9 +137,9 @@ describe('XeConsumer', function () {
 			assert.equal(count, 1);
 		}));
 
-		it('should not scrape and put job if success_count >= 10', co.wrap(function* () {
+		it('should not scrape and put job if success_count >= success_trials', co.wrap(function* () {
 			const payload = _.merge({
-				success_count: 10
+				success_count: config.consume.success_trials
 			}, default_payload);
 			mockBeanstalkdClient(['0', JSON.stringify(payload)]);
 			mockScrape('0.13');
@@ -150,9 +150,9 @@ describe('XeConsumer', function () {
 			assert(!mock_xe_producer_produce.called);
 		}));
 
-		it('do not reput job if scrape successfully when payload success_count = 9', co.wrap(function* () {
+		it('do not reput job if scrape successfully when payload success_count = success_trials - 1', co.wrap(function* () {
 			const payload = _.merge({
-				success_count: 9
+				success_count: config.consume.success_trials - 1
 			}, default_payload);
 			mockBeanstalkdClient(['0', JSON.stringify(payload)]);
 			mockScrape('0.13');
@@ -182,9 +182,9 @@ describe('XeConsumer', function () {
 			}));
 		}));
 
-		it('bury job if scrape with error when payload failure_count = 2', co.wrap(function* () {
+		it('bury job if scrape with error when payload failure_count = tolerance', co.wrap(function* () {
 			const payload = _.merge({
-				failure_count: 2
+				failure_count: config.consume.tolerance
 			}, default_payload);
 			mockBeanstalkdClient(['0', JSON.stringify(payload)]);
 			mockScrape(Error('error'));
@@ -194,9 +194,9 @@ describe('XeConsumer', function () {
 			assert(mock_beanstakld_client.buryAsync.calledWith('0'));
 		}));
 
-		it('do not reput job if scrape with error when payload failure_count = 2', co.wrap(function* () {
+		it('do not reput job if scrape with error when payload failure_count = tolerance', co.wrap(function* () {
 			const payload = _.merge({
-				failure_count: 2
+				failure_count: config.consume.tolerance
 			}, default_payload);
 			mockBeanstalkdClient(['0', JSON.stringify(payload)]);
 			mockScrape(Error('error'));
