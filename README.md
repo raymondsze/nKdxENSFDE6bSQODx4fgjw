@@ -52,8 +52,9 @@ This command is to put a job with payload specified in <b>config_production</b> 
 This command is to consume jobs with payload specified in <b>config_production</b> of <b> config/index.js </b>  
 To exit, you can press Ctrl-C  
 
-## Configuration
-Please take a look to the comments inside <b> config/index.js </b>
+## How to change payload and configuration
+Please take a look to the comments inside <b> config/index.js </b>  
+Eg. payload is located in xe.producer.payload  
 
 ## Enhancement and Alternative
 1. If job histroy is important, we could use <b>release</b>, we could use <b>mongodb</b> or <b>redis</b> to store the either success_count or failure_count (or both) so that we could keep the same jobId as well as the beanstalkd job histroy.  
