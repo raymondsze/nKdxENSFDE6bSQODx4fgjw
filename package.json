@@ -1,0 +1,49 @@
+{
+  "name": "backend-level-3-bs",
+  "version": "0.0.1",
+  "description": "backend level 3 beanstalkd",
+  "main": "index.js",
+  "scripts": {
+    "test": "node node_modules/grunt-cli/bin/grunt lint && node node_modules/istanbul/lib/cli cover _mocha -- -R spec",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
+    "produce": "NODE_ENV=production node producer",
+    "consume": "NODE_ENV=production node consumer"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raymondsze/AMsPp9UVIEytxfPvbrfGOg-T1TcmeIKyUaNDXGmYFX2gA-QQl7PQmSYEKpWHI6tV3fow-8BnFHmwIm0SE7_ck1vw8xQ-8YVxcELx.git"
+  },
+  "author": "Sze Ka Wai Raymond <szer0601@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/raymondsze/AMsPp9UVIEytxfPvbrfGOg-T1TcmeIKyUaNDXGmYFX2gA-QQl7PQmSYEKpWHI6tV3fow-8BnFHmwIm0SE7_ck1vw8xQ-8YVxcELx/issues"
+  },
+  "homepage": "https://github.com/raymondsze/AMsPp9UVIEytxfPvbrfGOg-T1TcmeIKyUaNDXGmYFX2gA-QQl7PQmSYEKpWHI6tV3fow-8BnFHmwIm0SE7_ck1vw8xQ-8YVxcELx#readme",
+  "dependencies": {
+    "beanstalkd": "^1.0.4",
+    "bluebird": "^3.1.1",
+    "cheerio": "^0.19.0",
+    "co": "^4.6.0",
+    "co-request": "^1.0.0",
+    "es6-error": "^2.0.2",
+    "fivebeans": "^1.3.1",
+    "lodash": "^4.0.1",
+    "mongodb": "^2.1.4",
+    "mongoose": "^4.3.6",
+    "proxyquire": "^1.7.3"
+  },
+  "devDependencies": {
+    "coveralls": "^2.11.6",
+    "eslint": "^1.10.3",
+    "eslint-config-aftership": "^1.10.1",
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-eslint": "^17.3.1",
+    "istanbul": "^0.4.2",
+    "load-grunt-config": "^0.19.1",
+    "mocha": "^2.4.5",
+    "mockgoose": "^5.2.4",
+    "nock": "^5.2.1",
+    "sinon": "^1.17.3"
+  }
+}
