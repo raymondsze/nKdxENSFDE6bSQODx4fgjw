@@ -12,7 +12,7 @@ co(function* () {
 	yield connectToMongoDB(config.mongodb);
 	const consumer = new XeConsumer(yield connectToBeanstalkd(config.beanstalkd), config.xe.tube);
 	yield consumer.watch();
-	consumer.consume(_.merge(
+	return consumer.consume(_.merge(
 		{priority: config.xe.producer.priority, ttr: config.xe.producer.ttr},
 		config.xe.consumer
 	));
