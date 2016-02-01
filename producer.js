@@ -9,5 +9,5 @@ co(function* () {
 	const producer = new XeProducer(yield connectToBeanstalkd(config.beanstalkd), config.xe.tube);
 	yield producer.use();
 	yield producer.produce(config.xe.producer);
-	yield producer.client.quitAsync();
+	return producer.client.quitAsync();
 });
