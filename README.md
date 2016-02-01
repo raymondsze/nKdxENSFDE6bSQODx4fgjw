@@ -43,9 +43,11 @@ To clone the project to your project folder
 ##### 2. npm install
 To install all required modules and dev modules
 ##### 3. npm test
-Please make sure port 6666 is not used, as mockgoose is operated on port 6666  
+<b>coveralls</b> is attached to monitor the test coverage (see the top badge)  
+<b>travis</b> is attached and run on node 4 and node 5 (see the top badge)  
+Please make sure port 6666 is not used, as <b>mockgoose</b> is operated on port <b>6666</b>  
 @see https://github.com/mccormicka/Mockgoose/issues/171  
-100% coverage is acheived. To make sure all codes is well, istanbul is enabled, coverage folder will be generated after this command is run.
+100% coverage is acheived. To make sure all codes is well, <b>istanbul</b> is enabled, coverage folder will be generated after this command is run.
 
 ## How to use
 ##### 1. npm run produce  
