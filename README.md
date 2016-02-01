@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/raymondsze/AMsPp9UVIEytxfPvbrfGOg-T1TcmeIKyUaNDXGmYFX2gA-QQl7PQmSYEKpWHI6tV3fow-8BnFHmwIm0SE7_ck1vw8xQ-8YVxcELx.svg)](https://travis-ci.org/raymondsze/AMsPp9UVIEytxfPvbrfGOg-T1TcmeIKyUaNDXGmYFX2gA-QQl7PQmSYEKpWHI6tV3fow-8BnFHmwIm0SE7_ck1vw8xQ-8YVxcELx.svg?branch=master)
-[![Coverage Status](https://coveralls.io/repos/raymondsze/AMsPp9UVIEytxfPvbrfGOg-T1TcmeIKyUaNDXGmYFX2gA-QQl7PQmSYEKpWHI6tV3fow-8BnFHmwIm0SE7_ck1vw8xQ-8YVxcELx/badge.svg?branch=master)](https://coveralls.io/r/raymondsze/AMsPp9UVIEytxfPvbrfGOg-T1TcmeIKyUaNDXGmYFX2gA-QQl7PQmSYEKpWHI6tV3fow-8BnFHmwIm0SE7_ck1vw8xQ-8YVxcELx?branch=master)
+[![Build Status](https://travis-ci.org/raymondsze/nKdxENSFDE6bSQODx4fgjw.svg)](https://travis-ci.org/raymondsze/nKdxENSFDE6bSQODx4fgjw.svg?branch=master)
+[![Coverage Status](https://coveralls.io/repos/raymondsze/nKdxENSFDE6bSQODx4fgjw/badge.svg?branch=master)](https://coveralls.io/r/raymondsze/nKdxENSFDE6bSQODx4fgjw?branch=master)
   
 ## Logic
 <img src="http://image.lxway.com/upload/9/3e/93e1a6ee4c096e918fdeaac3939300f9.png"/>  
@@ -38,11 +38,13 @@ The <b>scraper</b> is used scrape the required information from web.
 If information is incorrect with the payload (query data), error is thrown.  
 
 ## How to install
-##### 1. git clone https://github.com/raymondsze/AMsPp9UVIEytxfPvbrfGOg-T1TcmeIKyUaNDXGmYFX2gA-QQl7PQmSYEKpWHI6tV3fow-8BnFHmwIm0SE7_ck1vw8xQ-8YVxcELx  
+##### 1. git clone https://github.com/raymondsze/nKdxENSFDE6bSQODx4fgjw 
 To clone the project to your project folder
 ##### 2. npm install
 To install all required modules and dev modules
 ##### 3. npm test
+Please make sure port 6666 is not used, as mockgoose is operated on port 6666  
+@see https://github.com/mccormicka/Mockgoose/issues/171  
 100% coverage is acheived. To make sure all codes is well, istanbul is enabled, coverage folder will be generated after this command is run.
 
 ## How to use

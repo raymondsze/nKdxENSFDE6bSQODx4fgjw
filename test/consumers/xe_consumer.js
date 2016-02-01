@@ -1,7 +1,7 @@
 'use strict';
 const mockgoose = require('mockgoose');
 const mongoose = require('mongoose');
-mockgoose(mongoose);
+mockgoose(mongoose, {port: 6666});
 const co = require('co');
 const _ = require('lodash');
 const sinon = require('sinon');
