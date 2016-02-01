@@ -46,7 +46,6 @@ function connectToMongoDB(config) {
 		sigintBind(() => {
 			return new Promise((sigint_resolve, sigint_reject) => {
 				mongoose.disconnect(() => {
-					console.log(util.format('mongodb %s with port %s is closed.', config.host, config.port));
 					sigint_resolve();
 				});
 			});

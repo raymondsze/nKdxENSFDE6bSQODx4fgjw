@@ -1,4 +1,5 @@
 'use strict';
+const _ = require('lodash');
 const co = require('co');
 
 let callbacks = [];
@@ -6,7 +7,7 @@ let callbacks = [];
 // disconnect when Ctrl-C
 process.on('SIGINT', co.wrap(function* () {
 	// trigger all registered callback
-	yield callbacks;
+	yield _.map(callbacks, callback => callback());
 	process.exit();
 }));
 

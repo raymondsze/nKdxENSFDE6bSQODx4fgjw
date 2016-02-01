@@ -27,7 +27,6 @@ function connectToBeanstalkd(config) {
 		sigintBind(() => {
 			return new Promise((sigint_resolve, sigint_reject) => {
 				client.quit(() => {
-					console.log(util.format('beanstalkd server %s with port %s is closed.', config.host, config.port));
 					sigint_resolve();
 				});
 			});
