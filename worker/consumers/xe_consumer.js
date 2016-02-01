@@ -42,7 +42,7 @@ class XeConsumer {
 	 * @param  {number} [options.failure_delay = 3]				- the unit of currency being convert.
 	 * @param  {number} [options.success_trials = 10]			- the unit of currency to be converted.
 	 * @param  {number} [options.tolerance = 2] 				- the count of success.
-	 * @return {Promise<string>} 								- the promise to the job id.
+	 * @return {Promise} 								- the promise.
 	 */
 	consume(options) {
 		const this_options = _.merge({
